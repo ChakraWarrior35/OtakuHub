@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+
+{% block title %}Books - OtakuHub{% endblock %}
+
+{% block body %}
+<div class="container">
+     <header class="header">
+        <h1>BOOKS</h1>
+         <p>
+            Discover a world of wisdom and compassion. Enjoy a variety of publications
+               that will feed your heart and soul.
+        </p>
+    </header>
+    </div>
+<div class="page">
+    <div class="top-bar">
+        <div class="top-left">
+            <button class="filter-btn">
+                HIDE FILTERS
+                <span class="icon">≡</span>
+            </button>
+
+            <button class="filter-btn">
+                FEATURED
+                <span class="icon">≡</span>
+            </button>
+        </div>
+
+        <div class="top-right">
+            <span class="view-icon active" data-cols="1">▥</span>
+            <span class="view-icon" data-cols="2">▤</span>
+            <span class="view-icon" data-cols="3">▦</span>
+        </div>
+
+    </div>
+    <div class="content">
+        <aside class="sidebar">
+            <div class="filter-section">
+                <div class="filter-title">
+                    AVAILABILITY
+                    <span></span>
+                </div>
+
+                <label class="checkbox">
+                    <input type="checkbox">
+                    In Stock
+                </label>
+
+                <label class="checkbox">
+                    <input type="checkbox">
+                    Out of Stock
+                </label>
+            </div>
+        </aside>
+
+        <main class="main"></main>
+    </div>
+
+</div>
+    <div class="container">
+        <section class="books-grid">
+
+            <div class="book-card">
+                <img src="\static\ALMOST HOME.jpg" alt="Book">
+                <h3>Almost Home</h3>
+                <p>₹ 1900</p>
+            </div>
+
+            <div class="book-card">
+                <img src="\static\JOURNEY OF AWAKENING.jpg" alt="Book">
+                <h3>Journey of Awakening</h3>
+                <p>₹ 1900</p>
+            </div>
+
+            <div class="book-card">
+                <img src="\static\THERE IS NO OTHER.jpg" alt="Book">
+                <h3>There Is No Other</h3>
+                <p>₹ 2500</p>
+            </div>
+
+            <div class="book-card">
+                <img src="\static\REFLECTIONS ON THE JOURNEY.jpg" alt="Book">
+                <h3>Reflections on the Journey</h3>
+                <p>₹ 1600</p>
+            </div>
+
+            <div class="book-card">
+                <img src="\static\KEEP ME IN YOUR HEART.jpg" alt="Book">
+                <h3>Keep Me In Your Heart</h3>
+                <p>₹ 1800</p>
+            </div>
+
+            <div class="book-card">
+                <img src="\static\BE HERE NOW.jpg" alt="Book">
+                <h3>Be Here Now</h3>
+                <p>₹ 1800</p>
+            </div>
+
+            <div class="book-card">
+                <img src="\static\WALKING EACH OTHER HOME.jpg" alt="Book">
+                <h3>Walking Each Other Home</h3>
+                <p>₹ 2300</p>
+            </div>
+
+            <div class="book-card">
+                <img src="\static\STILL HERE.jpg" alt="Book">
+                <h3>Still Here</h3>
+                <p>₹ 1800</p>
+            </div>
+
+            <div class="book-card">
+                <img src="\static\YOU ARE THE UNIVERSE.jpg" alt="Book">
+                <h3>You Are The Universe</h3>
+                <p>₹ 2300</p>
+            </div>
+
+        </section>
+
+    </di>
+{% endblock body %}
