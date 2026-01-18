@@ -145,14 +145,15 @@ h1, h2 {
 .contact-wrapper {
     display: flex;
     justify-content: center;
-    padding: 40px 15px;
+    padding: 20px 15px;
 }
+
 
 .contact-box {
     width: 100%;
-    max-width: 650px;
+    max-width: 550px;
     background-color: #ecf0f1;
-    padding: 40px;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
@@ -450,3 +451,58 @@ h1, h2 {
 .book-contact-box button:hover {
     background-color: #2980b9;
 }
+.login-btn {
+    padding: 8px 16px;
+    background-color: #2273ba;
+    border-radius: 4px;
+    color: #fff !important;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+.login-btn:hover {
+    background-color: #1b79c1;
+}
+/* login from */
+.login-container {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 30px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.login-container h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+.login-container label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+.login-container input {
+    width: 100%;
+    margin-top: 6px;
+    padding: 1px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 0.95rem;
+    height: 40px;
+}
+.login-container button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.login-container button:hover {
+    background-color: #2980b9;
+}
+
