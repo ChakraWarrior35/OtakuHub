@@ -2,56 +2,54 @@
 
 {% block title %}Books - OtakuHub{% endblock %}
 
+
 {% block body %}
 <div class="container">
-     <header class="header">
+    <header class="header">
         <h1>BOOKS</h1>
-         <p>
-            Discover a world of wisdom and compassion. Enjoy a variety of publications
-               that will feed your heart and soul.
-        </p>
+        <p>Discover a world of wisdom and compassion. Enjoy a variety of publications that will feed your heart and soul.</p>
     </header>
-    </div>
+</div>
+
 <div class="page">
     <div class="top-bar">
         <div class="top-left">
-            <button class="filter-btn">
-                HIDE FILTERS
-                <span class="icon">≡</span>
-            </button>
-
-            <button class="filter-btn">
-                FEATURED
-                <span class="icon">≡</span>
-            </button>
+            <div class="category-dropdown">
+                <button class="filter-btn category-btn" aria-haspopup="true" aria-expanded="false">BOOKS <span class="icon">≡</span>
+                </button>
+                <div class="dropdown-menu category-menu" role="menu" aria-hidden="true">
+                    <ul>
+                        <li data-cat="all">BOOKS</li>
+                        <li data-cat="all">ALL</li>
+                        <li data-cat="fiction">FICTION</li>
+                        <li data-cat="spirituality">SPIRITUALITY</li>
+                        <li data-cat="selfhelp">SELF-HELP</li>
+                        <li data-cat="other">OTHER</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sort-dropdown">
+                <button class="filter-btn sort-btn" aria-haspopup="true" aria-expanded="false">FEATURED <span class="icon">≡</span></button>
+                <div class="dropdown-menu" role="menu" aria-hidden="true">
+                    <ul>
+                        <li data-sort="featured">FEATURED</li>
+                        <li data-sort="best">BEST SELLING</li>
+                        <li data-sort="az">ALPHABETICALLY, A-Z</li>
+                        <li data-sort="za">ALPHABETICALLY, Z-A</li>
+                        <li data-sort="price-asc">PRICE, LOW TO HIGH</li>
+                        <li data-sort="price-desc">PRICE, HIGH TO LOW</li>
+                        <li data-sort="date-old">DATE, OLD TO NEW</li>
+                        <li data-sort="date-new">DATE, NEW TO OLD</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <div class="top-right">
-            <span class="view-icon active" data-cols="1">▥</span>
             <span class="view-icon" data-cols="2">▤</span>
             <span class="view-icon" data-cols="3">▦</span>
         </div>
-
     </div>
-    <div class="content">
-        <aside class="sidebar">
-            <div class="filter-section">
-                <div class="filter-title">
-                    AVAILABILITY
-                    <span></span>
-                </div>
-
-                <label class="checkbox">
-                    <input type="checkbox">
-                    In Stock
-                </label>
-
-                <label class="checkbox">
-                    <input type="checkbox">
-                    Out of Stock
-                </label>
-            </div>
-        </aside>
 
         <main class="main"></main>
     </div>
@@ -61,60 +59,106 @@
         <section class="books-grid">
 
             <div class="book-card">
-                <img src="\static\ALMOST HOME.jpg" alt="Book">
+                <div class="book-thumb">
+                    <img src="/static/ALMOST HOME.jpg" alt="Book">
+                    <div class="book-overlay">
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
                 <h3>Almost Home</h3>
                 <p>₹ 1900</p>
             </div>
 
             <div class="book-card">
-                <img src="\static\JOURNEY OF AWAKENING.jpg" alt="Book">
+                <div class="book-thumb">
+                    <img src="/static/JOURNEY OF AWAKENING.jpg" alt="Book">
+                    <div class="book-overlay">
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
                 <h3>Journey of Awakening</h3>
                 <p>₹ 1900</p>
             </div>
 
             <div class="book-card">
-                <img src="\static\THERE IS NO OTHER.jpg" alt="Book">
+                <div class="book-thumb">
+                    <img src="/static/THERE IS NO OTHER.jpg" alt="Book">
+                    <div class="book-overlay">
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
                 <h3>There Is No Other</h3>
                 <p>₹ 2500</p>
             </div>
 
             <div class="book-card">
-                <img src="\static\REFLECTIONS ON THE JOURNEY.jpg" alt="Book">
+                <div class="book-thumb">
+                    <img src="/static/REFLECTIONS ON THE JOURNEY.jpg" alt="Book">
+                    <div class="book-overlay">
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
                 <h3>Reflections on the Journey</h3>
                 <p>₹ 1600</p>
             </div>
 
             <div class="book-card">
-                <img src="\static\KEEP ME IN YOUR HEART.jpg" alt="Book">
+                <div class="book-thumb">
+                    <img src="/static/KEEP ME IN YOUR HEART.jpg" alt="Book">
+                    <div class="book-overlay">
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
                 <h3>Keep Me In Your Heart</h3>
                 <p>₹ 1800</p>
             </div>
 
             <div class="book-card">
-                <img src="\static\BE HERE NOW.jpg" alt="Book">
+                <div class="book-thumb">
+                    <img src="/static/BE HERE NOW.jpg" alt="Book">
+                    <div class="book-overlay">
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
                 <h3>Be Here Now</h3>
                 <p>₹ 1800</p>
             </div>
 
             <div class="book-card">
-                <img src="\static\WALKING EACH OTHER HOME.jpg" alt="Book">
+                <div class="book-thumb">
+                    <img src="/static/WALKING EACH OTHER HOME.jpg" alt="Book">
+                    <div class="book-overlay">
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
                 <h3>Walking Each Other Home</h3>
                 <p>₹ 2300</p>
             </div>
 
             <div class="book-card">
-                <img src="\static\STILL HERE.jpg" alt="Book">
+                <div class="book-thumb">
+                    <img src="/static/STILL HERE.jpg" alt="Book">
+                    <div class="book-overlay">
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
                 <h3>Still Here</h3>
                 <p>₹ 1800</p>
             </div>
 
             <div class="book-card">
-                <img src="\static\YOU ARE THE UNIVERSE.jpg" alt="Book">
+                <div class="book-thumb">
+                    <img src="/static/YOU ARE THE UNIVERSE.jpg" alt="Book">
+                    <div class="book-overlay">
+                        <button class="btn add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
                 <h3>You Are The Universe</h3>
                 <p>₹ 2300</p>
             </div>
 
         </section>
 
-    </di>
+    </div>
+    <script src="/static/book.js"></script>
 {% endblock body %}
