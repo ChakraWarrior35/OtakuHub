@@ -14,17 +14,18 @@ def home():
 def about():
     return render_template("about.html")
 
+@app.route("/book")
+def books():
+    return render_template("book.html")
+
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
 
-@app.route("/book")
-def book():
-    return render_template("book.html")
-
 @app.route("/login")
 def login():
     return render_template("login.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)

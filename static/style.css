@@ -582,3 +582,110 @@ h1, h2 {
 .books-grid {
     margin-top: 12px; /* tighten space above the grid */
 }
+
+/* -----------------------------
+   Login page styles (creative, scoped)
+   ----------------------------- */
+.login-box {
+    max-width: 420px;
+    margin: 6vh auto;
+    padding: 36px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.72), rgba(245,247,250,0.6));
+    box-shadow: 0 14px 40px rgba(12,24,40,0.18);
+    backdrop-filter: blur(8px) saturate(120%);
+    border: 1px solid rgba(255,255,255,0.5);
+    text-align: center;
+}
+
+.login-box .logo {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    background: linear-gradient(135deg,#FFD27A,#FF6B81);
+    color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 8px 26px rgba(255,107,129,0.12);
+}
+
+.login-box h1 {
+    margin: 6px 0 4px;
+    font-size: 1.8rem;
+    color: #1F2D3D;
+}
+
+.login-box p {
+    margin-bottom: 18px;
+    color: #415261;
+}
+
+.form-group { text-align: left; margin-bottom: 14px; }
+
+.form-group label { display: block; margin-bottom: 6px; font-weight: 600; color: #2b3a44; font-size: 0.95rem; }
+
+.form-group input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(20,30,40,0.08);
+    background: #fff;
+    font-size: 0.95rem;
+    transition: box-shadow .15s ease, transform .12s ease, border-color .12s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    box-shadow: 0 10px 30px rgba(52,152,219,0.12);
+    transform: translateY(-1px);
+    border-color: #3498db;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(90deg,#6A82FB,#FC5C7D);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 10px 24px rgba(106,130,251,0.14);
+    transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.login-btn:hover { transform: translateY(-2px); box-shadow: 0 16px 36px rgba(106,130,251,0.18); }
+
+.messages { margin-bottom: 12px; }
+.message { padding: 8px 12px; border-radius: 8px; font-weight: 600; font-size: 0.95rem; }
+.message.error { background: #FDECEA; color: #B00020; border: 1px solid rgba(176,0,32,0.06); }
+.message.success { background: #E7F9EE; color: #1B7A3A; border: 1px solid rgba(27,122,58,0.06); }
+.form-errors { margin-bottom: 12px; color: #B00020; font-weight: 700; }
+
+.links { margin-top: 14px; display: flex; justify-content: space-between; gap: 10px; font-size: 0.92rem; }
+.links a { color: #3467E3; text-decoration: none; font-weight: 600; }
+.links a:hover { text-decoration: underline; }
+
+.tagline { margin-top: 18px; color: #6B7280; font-weight: 600; letter-spacing: 0.6px; }
+
+@media (max-width: 600px) {
+    .login-box { margin: 8vh 18px; padding: 20px; }
+    .login-box h1 { font-size: 1.4rem; }
+}
+
+/* small decorative accent */
+.login-box::before {
+    content: "";
+    position: absolute;
+    left: -40px;
+    top: -40px;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle at 30% 30%, rgba(255,182,77,0.12), transparent 35%);
+    border-radius: 50%;
+    pointer-events: none;
+}
