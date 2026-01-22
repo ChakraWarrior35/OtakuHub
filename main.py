@@ -30,5 +30,9 @@ def login():
 def create_account():
     return render_template("create_account.html")
 
+@app.route("/add_tocart")
+def add_to_cart():
+    return render_template("add_tocart.html")
+
 if __name__ == "__main__":
     app.run(debug=True)

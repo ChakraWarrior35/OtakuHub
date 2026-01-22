@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Add to Cart - OtakuHub{% endblock %}
+{% block body %}
+<head>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<div class="cart-container">
+    <h1>Cart</h1>
+
+    <!-- Cart Item -->
+    <div class="cart-item">
+        <img src="https://via.placeholder.com/80" alt="Product">
+        <div class="item-details">
+            <h3>Product Name</h3>
+            <p class="price">₹499</p>
+        </div>
+
+        <div class="quantity">
+            <button onclick="changeQty(-1)">-</button>
+            <span id="qty">1</span>
+            <button onclick="changeQty(1)">+</button>
+        </div>
+
+        <button class="remove">Remove</button>
+    </div>
+
+    <!-- Total -->
+    <div class="total">
+        Total: <strong>₹499</strong>
+    </div>
+
+    <!-- Checkout -->
+    <div class="checkout">
+        <button>Proceed to Checkout</button>
+    </div>
+</div>
+
+<script>
+    let qty = 1;
+
+    function changeQty(value) {
+        qty += value;
+        if (qty < 1) qty = 1;
+        document.getElementById("qty").innerText = qty;
+    }
+</script>
