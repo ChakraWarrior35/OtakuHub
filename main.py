@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask, render_template,request
+import flask
 
 app = Flask(__name__)
 
@@ -22,13 +23,23 @@ def books():
 def contact():
     return render_template("contact.html")
 
-@app.route("/login")
+@app.route("/login", methods=['GET', 'POST'])
 def login():
-    return render_template("login.html")
+    if flask.request.method == 'POST':
+        # Handle login logic here
+        pass
+        return render_template("index.html")
+    else:
+        return render_template("login.html")
 
-@app.route("/register")
+@app.route("/register", methods=['GET', 'POST'])
 def create_account():
-    return render_template("create_account.html")
+    if flask.request.method == 'POST':
+        # Handle registration logic here
+        pass
+        return render_template("login.html")
+    else:
+        return render_template("create_account.html")
 
 @app.route("/add_tocart")
 def add_to_cart():
