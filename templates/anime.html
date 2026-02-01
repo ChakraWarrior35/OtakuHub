@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}Anime Books - OtakuHub{% endblock %}
+
+{% block body %}
+<div class="container">
+    <header class="header">
+        <h1>ANIME BOOKS</h1>
+        <p>Dive into the captivating world of anime literature. Explore our curated collection of anime-inspired books that bring your favorite characters and stories to life.</p>
+    </header>
+</div>
+<div class="page">
+    <div class="top-bar">
+        <div class="top-left">
+            <div class="category-dropdown">
+                <button class="filter-btn category-btn" aria-haspopup="true" aria-expanded="false">ANIME <span class="icon">≡</span>
+                </button>
+                <div class="dropdown-menu category-menu" role="menu" aria-hidden="true">
+                    <ul>
+                        <li data-cat="all"><a href="/books">BOOKS</a></li>
+                        <li data-cat="all">ANIME</li>
+                        <li data-cat="fiction">FICTION</li>
+                        <li data-cat="spirituality">SPIRITUALITY</li>
+                        <li data-cat="selfhelp">SELF-HELP</li>
+                        <li data-cat="other">OTHER</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sort-dropdown">
+                <button class="filter-btn sort-btn" aria-haspopup="true" aria-expanded="false">FEATURED <span class="icon">≡</span></button>
+                <div class="dropdown-menu" role="menu" aria-hidden="true">
+                    <ul>
+                        <li data-sort="featured">FEATURED</li>
+                        <li data-sort="best">BEST SELLING</li>
+                        <li data-sort="az">ALPHABETICALLY, A-Z</li>
+                        <li data-sort="za">ALPHABETICALLY, Z-A</li>
+                        <li data-sort="price-asc">PRICE, LOW TO HIGH</li>
+                        <li data-sort="price-desc">PRICE, HIGH TO LOW</li>
+                        <li data-sort="date-old">DATE, OLD TO NEW</li>
+                        <li data-sort="date-new">DATE, NEW TO OLD</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="top-right">
+            <span class="view-icon" data-cols="2">▤</span>
+            <span class="view-icon" data-cols="3">▦</span>
+        </div>
+        
+    </div>
+
+        <main class="main"></main>
+    </div>
+</div>
+    <div class="container">
+        <section class="books-grid">
+            {% for book in books %}
+                <div class="book-card" data-category="{{ book.category }}" data-title="{{ book.title }}" data-price="{{ book.price }}" data-date="{{ book.date_added }}">
+                    <img src="{{ book.image_url }}" alt="{{ book.title }} Cover" class="book-image">
+                    <div class="book-info">
+                        <h3 class="book-title">{{ book.title }}</h3>
+                        <p class="book-author">by {{ book.author }}</p>
+                        <p class="book-price">${{ "%.2f"|format(book.price) }}</p>
+                        <a href="/book/{{ book.id }}" class="details-btn">View Details</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </section>
+    </div>
+{% endblock body %}
+
