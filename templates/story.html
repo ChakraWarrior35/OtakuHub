@@ -1,20 +1,19 @@
 {% extends "base.html" %}
-{% block title %}Anime Books - OtakuHub{% endblock %}
+{% block title %}Story Books - OtakuHub{% endblock %}
 
 {% block body %}
 <link rel="stylesheet" href="static/style.css">
-
 <div class="container">
     <header class="header">
-        <h1>ANIME</h1>
-        <p>Immerse yourself in the vibrant world of anime-inspired literature. Explore stories that capture the essence of your favorite anime series and characters.</p>
+        <h1>STORIES</h1>
+        <p>Dive into captivating tales that ignite your imagination and touch your heart. Explore our collection of stories that inspire and entertain.</p>
     </header>
-
+</div>
 <div class="page">
     <div class="top-bar">
         <div class="top-left">
             <div class="category-dropdown">
-                <button class="filter-btn category-btn" aria-haspopup="true" aria-expanded="false">BOOKS <span class="icon">≡</span>
+                <button class="filter-btn category-btn" aria-haspopup="true" aria-expanded="false">STORIES <span class="icon">≡</span>
                 </button>
                 <div class="dropdown-menu category-menu" role="menu" aria-hidden="true">
                     <ul>
@@ -54,47 +53,4 @@
         <main class="main"></main>
     </div>
 </div>
-
-<div class="container">
-    <div class="menu">
-
-        <div class="card">
-            <img src="https://i.imgur.com/8RKXAIV.jpg" alt="Ninja Adventure">
-            <div class="card-content">
-                <h3>Ninja Adventure</h3>
-                <p>Action • Friendship • Ninja</p>
-                <a href="read.html">Read Now</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="https://i.imgur.com/w4Z0GKs.jpg" alt="Pirate Journey">
-            <div class="card-content">
-                <h3>Pirate Journey</h3>
-                <p>Adventure • Sea • Dreams</p>
-                <a href="read.html">Read Now</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="https://i.imgur.com/5u2R0fs.jpg" alt="Demon Blade">
-            <div class="card-content">
-                <h3>Demon Blade</h3>
-                <p>Dark • Action • Fantasy</p>
-                <a href="read.html">Read Now</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="https://i.imgur.com/z9d6yWy.jpg" alt="Cursed Sorcerer">
-            <div class="card-content">
-                <h3>Cursed Sorcerer</h3>
-                <p>Supernatural • Action</p>
-                <a href="read.html">Read Now</a>
-            </div>
-        </div>
-
-    </div>
-</div>
 {% endblock body %}
-

@@ -38,5 +38,9 @@ def add_to_cart():
 def anime():
     return render_template("anime.html")
 
+@app.route("/story")
+def story():
+    return render_template("story.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
