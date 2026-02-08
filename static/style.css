@@ -821,19 +821,25 @@ h1, h2 {
     padding: 12px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-    text-align: center;
+    text-align: center;          
+    display: flex;
+    flex-direction: column;
+    align-items: center;         
 }
+
 .anime-card img {
-    width: 100%;
-    height: 260px;
+    width: 352px;
+    height: 352px;
     object-fit: cover;
     display: block;
     margin-bottom: 12px;
     transition: transform .25s ease;
 }
+
 .anime-card img:hover {
     transform: scale(1.03);
 }
+
 .anime-card h3 {
     font-size: 1.1rem;
     color: #2c3e50;
