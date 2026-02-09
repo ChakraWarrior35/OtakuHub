@@ -869,3 +869,26 @@ h1, h2 {
     font-size: 1.1rem;
     margin-bottom: 20px;
 }
+.story-card {
+    background-color: #ffffff;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    text-align: center;          
+    display: flex;
+    flex-direction: column;
+    align-items: center;         
+}
+
+.story-card img {
+    width: 352px;
+    height: 352px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 12px;
+    transition: transform .25s ease;
+}
+
+.story-card img:hover {
+    transform: scale(1.03);
+}
