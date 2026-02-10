@@ -892,3 +892,35 @@ h1, h2 {
 .story-card img:hover {
     transform: scale(1.03);
 }
+.story-card h3 {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+.story-card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+@media (max-width: 480px) {
+    .story-card img { height: 200px; }
+}
+/* Spiritual Page */
+.spiritual-content {
+    max-width: 800px;
+    margin: 40px;
+    padding: 30px;
+    align-items: center;
+    line-height: 1.8;
+    color: #333;
+}
+.spiritual-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+.spiritual-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+

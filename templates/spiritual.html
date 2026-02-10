@@ -1,12 +1,13 @@
 {% extends "base.html" %}
-{% block title %}Anime Books - OtakuHub{% endblock %}
+{% block title %}Spiritual Books - OtakuHub{% endblock %}
 
 {% block body %}
 <div class="container">
     <header class="header">
-        <h1>ANIME</h1>
-        <p>Immerse yourself in the vibrant world of anime-inspired literature. Explore stories that capture the essence of your favorite anime series and characters.</p>
+        <h1>Spiritual Books</h1>
+        <p>Discover a world of wisdom and compassion. Enjoy a variety of publications that will feed your heart and soul.</p>
     </header>
+</div>
 
 <div class="page">
     <div class="top-bar">
@@ -19,7 +20,7 @@
                         <li data-cat="all"><a href="/book">BOOKS</a></li>
                         <li data-cat="all"><a href="/anime">ANIME</a></li>
                         <li data-cat="fiction"><a href="/story">STORY</a></li>
-                        <li data-cat="spirituality">SPIRITUALITY</li>
+                        <li data-cat="spirituality"><a href="/spiritual">SPIRITUALITY</a></li>
                         <li data-cat="selfhelp">SELF-HELP</li>
                         <li data-cat="other">OTHER</li>
                     </ul>
@@ -51,49 +52,13 @@
 
         <main class="main"></main>
     </div>
-</div>
+        <div>
+            <h1>📿 Spiritual Books </h1>
 
-<div class="container">
-    <div class="menu">
-
-        <div class="card anime-card">
-            <img src="static/Imag/Naruto.jpg" alt="Ninja Adventure">
-            <div class="card-content">
-                <h3>Naruto</h3>
-                <p>Action • Friendship • Ninja</p>
-                <a href="read.html">Read Now</a>
-            </div>
+            <p>
+                This is a free reading page.  
+                Everyone can read the spiritual books freely without login.
+            </p>
         </div>
-
-        <div class="card anime-card">
-            <img src="static/Imag/Demon Slayer.jpg" alt="Pirate Journey">
-            <div class="card-content">
-                <h3>Demon Slayer</h3>
-                <p>Adventure • Sea • Dreams</p>
-                <a href="read.html">Read Now</a>
-            </div>
-        </div>
-
-        <div class="card anime-card">
-            <img src="static/Imag/Attack on Titan.jpg" alt="Demon Blade">
-            <div class="card-content">
-                <h3>Attack on Titan</h3>
-                <p>Dark • Action • Fantasy</p>
-                <a href="read.html">Read Now</a>
-            </div>
-        </div>
-
-        <div class="card anime-card">
-            <img src="static/Imag/JJK.jpg" alt="Jujutsu Kaisen">
-            <div class="card-content">
-                <h3>Jujutsu Kaisen</h3>
-                <p>Curse Mark • Action</p>
-                <a href="read.html">Read Now</a>
-            </div>
-        </div>
-
-    </div>
-</div>
-<script src="/static/book.js"></script>
+<script src="static/book.js"></script>
 {% endblock body %}
-

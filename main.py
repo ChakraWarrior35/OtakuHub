@@ -42,5 +42,10 @@ def anime():
 def story():
     return render_template("story.html")
 
+@app.route("/spiritual")
+def spiritual():
+    return render_template("spiritual.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True)
