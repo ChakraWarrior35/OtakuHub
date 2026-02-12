@@ -21,14 +21,14 @@ def books():
 @app.route("/contact", methods=['GET', 'POST'])
 def contact():
     if request.method == "POST":
-        # Handle form submission logic here
+       
         pass
     return render_template("contact.html")
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
     if request.method == "POST":
-        # Handle form submission logic here
+       
         pass
     return render_template("login.html")
 
