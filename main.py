@@ -21,22 +21,39 @@ def books():
 @app.route("/contact", methods=['GET', 'POST'])
 def contact():
     if request.method == "POST":
-       
-        pass
-    return render_template("contact.html")
+       name =request.form.get("name")
+       email =request.form.get("email")
+    message =request.form.get("message")
+    return render_template("contact.html", name=name, email=email, message=message)
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
     if request.method == "POST":
-       
-        pass
+        email = request.form.get("email")
+        password = request.form.get("password")
+        
+        user = mongo.db.user.find_one({"
+            "email": email,
+            "password": password
+        })
+        if user:
+            return "Login successful!"
+        else:
+            return "Invalid email or password." 
     return render_template("login.html")
 
 @app.route("/register", methods=['GET', 'POST'])
 def create_account():
     if request.method == "POST":
-        # Handle form submission and create account logic here
-        pass
+        name = request.form.get("name")
+        email = request.form.get("email")
+        password = request.form.get("password")
+        
+        mongo.db.user.insert_one({
+            "name": name,
+            "email": email,
+            "password": password
+        })
     return render_template("create_account.html")
 
 @app.route("/add_tocart")
