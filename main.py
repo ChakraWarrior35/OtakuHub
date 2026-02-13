@@ -32,7 +32,7 @@ def login():
         email = request.form.get("email")
         password = request.form.get("password")
         
-        user = mongo.db.user.find_one({"
+        user = mongo.db.user.find({
             "email": email,
             "password": password
         })
