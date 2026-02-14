@@ -72,6 +72,10 @@ def story():
 def spiritual():
     return render_template("spiritual.html")
 
+@app.route("/self_book")
+def self_book():
+    return render_template("self_book.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
