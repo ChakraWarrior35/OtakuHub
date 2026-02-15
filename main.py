@@ -54,6 +54,7 @@ def create_account():
             "email": email,
             "password": password
         })
+        return "Account created successfully!"
     return render_template("create_account.html")
 
 @app.route("/add_tocart")
