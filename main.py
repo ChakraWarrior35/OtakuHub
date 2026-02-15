@@ -1,17 +1,12 @@
 from flask import Flask, render_template, request
-import mysql.connector
+from flask_pymongo import PyMongo
 from dotenv import load_dotenv
 import os
 load_dotenv()
 
 app = Flask(__name__)
-
-con=mysql.connector.connect(
-    host=os.getenv("host"),
-    user=os.getenv("user"),
-    password=os.getenv("password"),
-    database=os.getenv("database")
-)
+app.config["MONGO_URI"] = os.getenv("MONGO_URI")
+mongo = PyMongo(app)
 
 @app.route("/base")
 def base():
