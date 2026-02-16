@@ -1,11 +1,8 @@
 from flask import Flask, render_template, request
 from flask_pymongo import PyMongo
-from dotenv import load_dotenv
-import os
-load_dotenv()
 
 app = Flask(__name__)
-app.config["MONGO_URI"] = os.getenv("MONGO_URI")
+app.config["MONGO_URI"] = "mongodb://localhost:27017/otakuhub"
 mongo = PyMongo(app)
 
 @app.route("/base")
@@ -82,6 +79,10 @@ def spiritual():
 @app.route("/self_book")
 def self_book():
     return render_template("self_book.html")
+
+@app.route("/other")
+def other():
+    return render_template("other.html")
 
 
 if __name__ == "__main__":
