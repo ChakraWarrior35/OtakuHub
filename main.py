@@ -1,9 +1,12 @@
+import os
 from flask import Flask, render_template, request
 from flask_pymongo import PyMongo
+from dotenv import load_dotenv
+load_dotenv()
 
 app = Flask(__name__)
-app.config["MONGO_URI"] = "mongodb://localhost:27017/otakuhub"
-mongo = PyMongo(app)
+app.config["MONGO_URI"] = os.getenv("MONGO_URI")
+mongo = PyMongo(app).db
 
 @app.route("/base")
 def base():
@@ -23,11 +26,17 @@ def books():
 
 @app.route("/contact", methods=['GET', 'POST'])
 def contact():
+    name = ""
+    email = ""
+    message = ""
+
     if request.method == "POST":
-       name =request.form.get("name")
-       email =request.form.get("email")
-    message =request.form.get("message")
+        name = request.form.get("name")
+        email = request.form.get("email")
+        message = request.form.get("message")
+
     return render_template("contact.html", name=name, email=email, message=message)
+
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
